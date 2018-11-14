@@ -1,0 +1,13 @@
+<form>
+  <input placeholder="Inversion Inicial" [(ngModel)]="initialValue" [ngModelOptions]="{standalone: true}">
+  <input placeholder="Costo Anual de Operación" [(ngModel)]="operationCost" [ngModelOptions]="{standalone: true}">
+  <input placeholder="Número de periodos" (input)="onNperiodChange()" [(ngModel)]="periods" [ngModelOptions]="{standalone: true}">
+  <input placeholder="Valor de rescate" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
+  <input placeholder="Interes del periodo" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
+  <input placeholder="TIR" [(ngModel)]="roi" [ngModelOptions]="{standalone: true}">
+
+  <app-flux *ngFor="let n of fluxList"></app-flux>
+
+  <input placeholder="TIR" [(ngModel)]="roi" [ngModelOptions]="{standalone: true}">
+  <input type="button">
+</form>
