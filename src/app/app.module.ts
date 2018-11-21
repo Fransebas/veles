@@ -11,13 +11,25 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatTabsModule} from '@angular/material';
 import { SimpleCalculatorComponent } from './simple-calculator/simple-calculator.component';
+import { OperationFPComponent } from './operation-fp/operation-fp.component';
+import { OperationPFComponent } from './operation-pf/operation-pf.component';
+import { OperationFAComponent } from './operation-fa/operation-fa.component';
+import { OperationAFComponent } from './operation-af/operation-af.component';
+import { OperationPAComponent } from './operation-pa/operation-pa.component';
+import { OperationAPComponent } from './operation-ap/operation-ap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataScreenComponent,
     FluxComponent,
-    SimpleCalculatorComponent
+    SimpleCalculatorComponent,
+    OperationFPComponent,
+    OperationPFComponent,
+    OperationFAComponent,
+    OperationAFComponent,
+    OperationPAComponent,
+    OperationAPComponent
   ],
   imports: [
     BrowserModule,

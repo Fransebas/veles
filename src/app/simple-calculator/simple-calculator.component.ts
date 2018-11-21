@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectorContext } from '@angular/compiler';
 
 @Component({
   selector: 'app-simple-calculator',
@@ -7,18 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleCalculatorComponent implements OnInit {
 
-  text1: string;
-  value1: number;
-  value2: number;
-
   constructor() {
-    this.text1 = "Hola";
   }
 
   ngOnInit() {
   }
 
-  onOpcionChange() {
-     
-  }
 }
