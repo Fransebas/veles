@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatTabsModule} from '@angular/material';
+import { SimpleCalculatorComponent } from './simple-calculator/simple-calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataScreenComponent,
-    FluxComponent
+    FluxComponent,
+    SimpleCalculatorComponent
   ],
   imports: [
     BrowserModule,
