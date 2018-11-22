@@ -19,6 +19,11 @@ import { OperationFAComponent } from './operation-fa/operation-fa.component';
 import { OperationAFComponent } from './operation-af/operation-af.component';
 import { OperationPAComponent } from './operation-pa/operation-pa.component';
 import { OperationAPComponent } from './operation-ap/operation-ap.component';
+import { NPerComponent } from './n-per/n-per.component';
+import { PerFPComponent } from './per-fp/per-fp.component';
+import { PerFAComponent } from './per-fa/per-fa.component';
+import { PerPAComponent } from './per-pa/per-pa.component';
+import { OperationIEFComponent } from './operation-ief/operation-ief.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { OperationAPComponent } from './operation-ap/operation-ap.component';
     OperationFAComponent,
     OperationAFComponent,
     OperationPAComponent,
-    OperationAPComponent
+    OperationAPComponent,
+    NPerComponent,
+    PerFPComponent,
+    PerFAComponent,
+    PerPAComponent,
+    OperationIEFComponent
   ],
   imports: [
     BrowserModule,
