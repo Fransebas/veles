@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { DataScreenComponent } from './data-screen/data-screen.component';
 import { FluxComponent } from './flux/flux.component';
 
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MaterialModule } from './material.module';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -23,7 +25,9 @@ import { SimpleCalculatorComponent } from './simple-calculator/simple-calculator
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,42 @@
-<form>
-  <input placeholder="Inversion Inicial" [(ngModel)]="initialValue" [ngModelOptions]="{standalone: true}">
-  <input placeholder="Costo Anual de Operación" [(ngModel)]="operationCost" [ngModelOptions]="{standalone: true}">
-  <input placeholder="Número de periodos" (input)="onNperiodChange()" [(ngModel)]="periods"
-         [ngModelOptions]="{standalone: true}">
-  <input placeholder="Valor de rescate" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
-  <input placeholder="Interes del periodo" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
-  <input placeholder="TIR" [(ngModel)]="roi" [ngModelOptions]="{standalone: true}">
+<mat-card>
+  <mat-card-title>Datos</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Inversion Inicial" [(ngModel)]="initialValue" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;    
+    <mat-form-field>
+      <input matInput placeholder="Costo Anual de Operación" [(ngModel)]="operationCost" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput placeholder="Número de periodos" (input)="onNperiodChange()" [(ngModel)]="periods" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput placeholder="Valor de rescate" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput placeholder="Interes del periodo" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+    <input matInput placeholder="TIR" [(ngModel)]="roi" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;
 
-  {{ periods + periods }}
+    <button mat-raised-button>Calcular</button>
 
-  <input type="button">
-
-  <app-flux *ngFor="let n of fluxList"></app-flux>
+    <app-flux *ngFor="let n of fluxList"></app-flux>
 
 
-</form>
-
+  </form>
+  <mat-card>
+    <mat-card-title>Resultados</mat-card-title>
+    <mat-form-field>
+      <input matInput placeholder="VNA" >
+    </mat-form-field>
+  </mat-card>
+</mat-card>
 
