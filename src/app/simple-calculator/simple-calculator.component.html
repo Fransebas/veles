@@ -1,9 +1,20 @@
-<p>
-  {{text1}}<br>
-  <select [(ngModel)]="selector" (change)="onOpcionChange()">
-      <option value="va">VA</option>
-      <option value="vf">VF</option>
-  </select><br>
-  <input placeholder="" [(ngModel)]="value1"><br>
-  <input placeholder="" [(ngModel)]="value2"><br>
-</p>
+<mat-tab-group>
+    <mat-tab label="F/P">
+      <app-operation-fp></app-operation-fp>
+    </mat-tab>
+    <mat-tab label="P/F">
+      <app-operation-pf></app-operation-pf>
+    </mat-tab>
+    <mat-tab label="F/A">
+      <app-operation-fa></app-operation-fa>
+    </mat-tab>
+    <mat-tab label="A/F">
+      <app-operation-af></app-operation-af>
+    </mat-tab>
+    <mat-tab label="P/A">
+      <app-operation-pa></app-operation-pa>
+    </mat-tab>
+    <mat-tab label="A/P">
+      <app-operation-ap></app-operation-ap>
+    </mat-tab>
+  </mat-tab-group>
