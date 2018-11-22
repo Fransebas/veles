@@ -6,12 +6,15 @@
   <input placeholder="Valor de rescate" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
   <input placeholder="Interes del periodo" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
   <input placeholder="TIR" [(ngModel)]="roi" [ngModelOptions]="{standalone: true}">
-
-  {{ periods + periods }}
-
   <input type="button">
 
-  <app-flux *ngFor="let n of fluxList"></app-flux>
+  <app-flux *ngFor="let n of fluxNumbers" (changeModel)="onFluxChange($event, n)"></app-flux>
+
+  <ng-container *ngFor="let fm of fluxList">
+    <p> {{ fm.amount + 1 }} </p>
+  </ng-container>
+
+  {{ JSON.stringify(this.fluxList) }}
 
 
 </form>

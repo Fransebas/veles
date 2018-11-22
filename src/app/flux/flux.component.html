@@ -1,5 +1,5 @@
 <form>
-  <input placeholder="amount">
-  <input placeholder="from">
-  <input placeholder="to">
+  <input placeholder="amount" (input)="onChange()" [(ngModel)]="model.amount" [ngModelOptions]="{standalone: true}">
+  <input placeholder="from" (input)="onChange()" [(ngModel)]="model.from" [ngModelOptions]="{standalone: true}">
+  <input placeholder="to" (input)="onChange()" [(ngModel)]="model.to" [ngModelOptions]="{standalone: true}">
 </form>
