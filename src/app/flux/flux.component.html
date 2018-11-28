@@ -1,5 +1,13 @@
 <form>
-  <input placeholder="amount" (input)="onChange()" [(ngModel)]="model.amount" [ngModelOptions]="{standalone: true}">
-  <input placeholder="from" (input)="onChange()" [(ngModel)]="model.from" [ngModelOptions]="{standalone: true}">
-  <input placeholder="to" (input)="onChange()" [(ngModel)]="model.to" [ngModelOptions]="{standalone: true}">
+  <mat-form-field>
+    <input matInput decimal dataType="numeric" placeholder="amount" (input)="onChange()" [(ngModel)]="model.amount" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field>
+    <input matInput decimal dataType="numeric" placeholder="from" (input)="onChange()" [(ngModel)]="model.from" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field>
+    <input matInput decimal dataType="numeric" placeholder="to" (input)="onChange()" [(ngModel)]="model.to" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
 </form>
