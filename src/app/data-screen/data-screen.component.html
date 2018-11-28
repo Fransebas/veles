@@ -2,34 +2,34 @@
 <mat-card>
   <mat-card-title>Datos</mat-card-title>
   <form>
-    <mat-form-field>
-      <input matInput dataType="numeric"  placeholder="Inversion Inicial"  type="number" [(ngModel)]="initialValue" [ngModelOptions]="{standalone: true}">
+    <mat-form-field >
+      <input matInput dataType="numeric"  placeholder="Inversion Inicial"  type="number" [(ngModel)]="dataObj.initialValue" [ngModelOptions]="{standalone: true}">
     </mat-form-field>
     &nbsp;&nbsp;&nbsp;    
     <mat-form-field>
-      <input matInput dataType="numeric"  placeholder="Costo Anual de Operación" type="number"  [(ngModel)]="operationCost" [ngModelOptions]="{standalone: true}">
+      <input matInput dataType="numeric"  placeholder="Costo Anual de Operación" type="number"  [(ngModel)]="dataObj.operationCost" [ngModelOptions]="{standalone: true}">
     </mat-form-field>
     &nbsp;&nbsp;&nbsp;
     <mat-form-field>
-      <input matInput  dataType="numeric" placeholder="Número de flujos" type="number"  (input)="onNperiodChange()" [(ngModel)]="periods" [ngModelOptions]="{standalone: true}">
+      <input matInput  dataType="numeric" placeholder="Número de flujos" type="number"  (input)="onNperiodChange()" [(ngModel)]="dataObj.periods" [ngModelOptions]="{standalone: true}">
     </mat-form-field>
     &nbsp;&nbsp;&nbsp;
     <mat-form-field>
-      <input matInput dataType="numeric"  placeholder="Valor de rescate"  type="number" [(ngModel)]="returnValue" [ngModelOptions]="{standalone: true}">
+      <input matInput dataType="numeric"  placeholder="Valor de rescate"  type="number" [(ngModel)]="dataObj.returnValue" [ngModelOptions]="{standalone: true}">
     </mat-form-field>
     &nbsp;&nbsp;&nbsp;
     <mat-form-field>
-      <input matInput dataType="numeric"  placeholder="Interes del periodo" type="number"   [(ngModel)]="interest" [ngModelOptions]="{standalone: true}">
+      <input matInput dataType="numeric"  placeholder="Interes del periodo" type="number"   [(ngModel)]="dataObj.interest" [ngModelOptions]="{standalone: true}">
     </mat-form-field>
     &nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-    <input matInput dataType="numeric"  placeholder="TIR" type="number" [(ngModel)]="roi" [ngModelOptions]="{standalone: true}">
-    </mat-form-field>
+    <!--mat-form-field>
+    <input matInput dataType="numeric"  placeholder="TIR" type="number" [(ngModel)]="dataObj.roi" [ngModelOptions]="{standalone: true}">
+    </mat-form-field-->
     &nbsp;&nbsp;&nbsp;
 
     <button mat-raised-button (click)="calculate()">Calcular</button>
 
-    <app-flux *ngFor="let n of fluxNumbers" (changeModel)="onFluxChange($event, n)"></app-flux>
+    <app-flux *ngFor="let n of dataObj.fluxNumbers" (changeModel)="onFluxChange($event, n)" [model]="dataObj.fluxList[n]"></app-flux>
 
 
   </form>

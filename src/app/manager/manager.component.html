@@ -5,4 +5,4 @@
 
 <button mat-raised-button (click)="calculate()">Ordenar</button>
 
-<app-data-screen *ngFor="let n of dataNumbers" (changeModel)="onNPeriodsChange($event, n)" ></app-data-screen>
+<app-data-screen *ngFor="let n of dataNumbers" (changeModel)="onNPeriodsChange($event, n)" [dataObj]="datas[n]" ></app-data-screen>
