@@ -50,10 +50,6 @@ export class ManagerComponent implements OnInit {
         return -1;
       return 0;
     })
-    /*this.datas[0].color = "green";
-    for (let i = 1; i < this.datas.length; i++) {
-      this.datas[i].color = "red";
-    }*/
 
     var r : number;
     var g : number;
