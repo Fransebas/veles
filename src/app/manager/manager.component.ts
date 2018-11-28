@@ -48,11 +48,14 @@ export class ManagerComponent implements OnInit {
   {
     this.datas.sort( (a : DataScreenComunication, b : DataScreenComunication) => {
       if (a.vna < b.vna)
-        return -1;
-      if (a.vna > b.vna)
         return 1;
+      if (a.vna > b.vna)
+        return -1;
       return 0;
     })
+    this.datas[0].color = "green";
+    for (let i = 1; i < this.datas.length; i++) {
+      this.datas[i].color = "red";
+    }
   }
-
 }
