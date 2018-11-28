@@ -1,7 +1,18 @@
-<p>Tasa</p>
-<input [(ngModel)]="tasa" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
-<p>Periodos</p>
-<input [(ngModel)]="periodos" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
-<p>Anualidad</p>
-<input [(ngModel)]="anualidad" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
-<p>Respuesta: {{res}}</p>
+<mat-card>
+        <mat-card-title>Futuro/Anualidad</mat-card-title>
+        <form>
+            <p>Tasa</p>
+            <mat-form-field>
+                <input matInput [(ngModel)]="tasa" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
+            </mat-form-field>
+            <p>Periodos</p>
+            <mat-form-field>
+                <input matInput [(ngModel)]="periodos" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
+            </mat-form-field>
+            <p>Anualidad</p>
+            <mat-form-field>
+                <input matInput [(ngModel)]="anualidad" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
+            </mat-form-field>
+            <p>Respuesta: {{res}}</p>
+        </form>
+    </mat-card>
