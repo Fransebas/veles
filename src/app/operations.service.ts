@@ -50,4 +50,21 @@ export class OperationsService {
     }
     return sum;
   }
+  getIEF(tasa: number, periodos: number){
+    return Math.pow(1+tasa/periodos,periodos)-1;
+  }
+
+  getNfp(futuro: number, presente: number, tasa: number){
+    return Math.log(futuro/presente)/Math.log(1+tasa);
+  }
+
+  getNpa(presente: number, anualidad: number, tasa: number){
+    return -Math.log(1-tasa*presente/anualidad)/Math.log(1+tasa);
+  }
+
+  getNaf(anualidad: number, futuro: number, tasa: number){
+    return Math.log(1+tasa*futuro/anualidad)/Math.log(1+tasa);
+  }
+
 }
+

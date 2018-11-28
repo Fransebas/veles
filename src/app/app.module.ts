@@ -27,6 +27,11 @@ import { OperationAFComponent } from './operation-af/operation-af.component';
 import { OperationPAComponent } from './operation-pa/operation-pa.component';
 import { OperationAPComponent } from './operation-ap/operation-ap.component';
 import { ManagerComponent } from './manager/manager.component';
+import { NPerComponent } from './n-per/n-per.component';
+import { PerFPComponent } from './per-fp/per-fp.component';
+import { PerFAComponent } from './per-fa/per-fa.component';
+import { PerPAComponent } from './per-pa/per-pa.component';
+import { OperationIEFComponent } from './operation-ief/operation-ief.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,11 @@ import { ManagerComponent } from './manager/manager.component';
     OperationPAComponent,
     OperationAPComponent,
     ManagerComponent,
-
+    NPerComponent,
+    PerFPComponent,
+    PerFAComponent,
+    PerPAComponent,
+    OperationIEFComponent
   ],
   imports: [
     BrowserModule,

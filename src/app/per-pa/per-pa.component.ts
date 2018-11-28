@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { OperationsService } from '../operations.service';
 
 @Component({
-  selector: 'app-operation-pa',
-  templateUrl: './operation-pa.component.html',
-  styleUrls: ['./operation-pa.component.css']
+  selector: 'app-per-pa',
+  templateUrl: './per-pa.component.html',
+  styleUrls: ['./per-pa.component.css']
 })
-export class OperationPAComponent implements OnInit {
+export class PerPAComponent implements OnInit {
 
   tasa: number;
-  periodos: number;
+  presente: number;
   anualidad: number;
   res: number;
 
@@ -17,12 +17,12 @@ export class OperationPAComponent implements OnInit {
 
   ngOnInit() {
     this.tasa=0;
-    this.periodos=0;
+    this.presente=0;
     this.anualidad=0;
     this.res=0;
   }
 
   onValueChange() {
-    this.res = this.OpService.getPA(this.anualidad,this.tasa,this.periodos);
+    this.res = this.OpService.getNpa(this.presente,this.anualidad,this.tasa);
   }
 }

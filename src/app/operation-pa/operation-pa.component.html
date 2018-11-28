@@ -1,3 +1,7 @@
-<p>
-  operation-pa works!
-</p>
+<p>Tasa</p>
+<input [(ngModel)]="tasa" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
+<p>Periodos</p>
+<input [(ngModel)]="periodos" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
+<p>Anualidad</p>
+<input [(ngModel)]="anualidad" [ngModelOptions]="{standalone: true}" (input)="onValueChange()"><br>
+<p>Respuesta: {{res}}</p>
