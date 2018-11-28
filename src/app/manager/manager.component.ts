@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataScreenComunication} from '../Models/DataScreenComunication';
 import {FluxModel} from '../Models/FluxModel';
+import { getNumberOfCurrencyDigits } from '@angular/common';
 
 @Component({
   selector: 'app-manager',
@@ -49,9 +50,21 @@ export class ManagerComponent implements OnInit {
         return -1;
       return 0;
     })
-    this.datas[0].color = "green";
+    /*this.datas[0].color = "green";
     for (let i = 1; i < this.datas.length; i++) {
       this.datas[i].color = "red";
+    }*/
+
+    var r : number;
+    var g : number;
+    var b : number;
+    r = 0;
+    g = 255;
+    b = 0;
+    for (let i = 0; i < this.datas.length; i++) {
+      this.datas[i].color = "rgb("+r.toString()+", "+g.toString()+", "+b.toString()+")";
+      r = Math.floor(255/this.datas.length*(i+1));
+      g = 255 - Math.floor(255/this.datas.length*(i+1));
     }
   }
 }
