@@ -1,4 +1,4 @@
-import {Output, Component, OnInit, EventEmitter} from '@angular/core';
+import {Output, Component, OnInit, EventEmitter, Input} from '@angular/core';
 import {FluxModel} from '../Models/FluxModel';
 
 @Component({
@@ -9,7 +9,7 @@ import {FluxModel} from '../Models/FluxModel';
 export class FluxComponent implements OnInit {
 
   @Output() changeModel: EventEmitter<FluxModel> = new EventEmitter();
-  model: FluxModel = new FluxModel();
+  @Input() model: FluxModel = new FluxModel();
 
 
   constructor() {

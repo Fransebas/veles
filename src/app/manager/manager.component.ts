@@ -9,7 +9,7 @@ import {FluxModel} from '../Models/FluxModel';
 })
 export class ManagerComponent implements OnInit {
 
-
+  JSON = JSON;
 
   n_proyects : number;
 
@@ -38,10 +38,6 @@ export class ManagerComponent implements OnInit {
     this.datas = auxDatas;
 
     this.dataNumbers = auxList;
-
-    console.log("this.dataNumbers", this.dataNumbers);
-    console.log("datas", this.datas);
-
   }
 
   public calculate()
