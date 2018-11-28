@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FluxModel} from '../Models/FluxModel';
 import {OperationsService} from '../operations.service';
+import {DataScreenComunication} from '../Models/DataScreenComunication';
 
 @Component({
   selector: 'app-data-screen',
@@ -9,7 +10,8 @@ import {OperationsService} from '../operations.service';
 })
 export class DataScreenComponent implements OnInit {
 
-  @Input() vna: number;
+  @Input() dataObj: DataScreenComunication = new DataScreenComunication();
+  @Output() changeModel : EventEmitter<DataScreenComunication> = new EventEmitter<DataScreenComunication>();
 
   periods: number;
   initialValue: number;
@@ -18,6 +20,7 @@ export class DataScreenComponent implements OnInit {
   operationCost: number;
   returnValue;
   roi: number;
+
 
   fluxNumbers: number[] = [];
   fluxList: FluxModel[] = [];
@@ -45,10 +48,14 @@ export class DataScreenComponent implements OnInit {
       flux.amount = parseFloat(String(flux.amount));
       flux.from = parseFloat(String(flux.from));
     });
-    fluxCopyList.forEach( flux => flux.amount += parseFloat(String(this.operationCost)));
+    if (this.operationCost)
+      fluxCopyList.forEach( flux => flux.amount += parseFloat(String(this.operationCost)));
     if (this.returnValue)
       fluxCopyList[fluxCopyList.length - 1].amount = fluxCopyList[fluxCopyList.length - 1].amount + parseFloat(this.returnValue);
-    this.vna = this.operationService.getVNA(fluxCopyList, this.interest) + (this.initialValue ? parseFloat(String(this.initialValue)) : 0 );
+    var a = this.operationService.getVNA(fluxCopyList, this.interest) + (this.initialValue ? parseFloat(String(this.initialValue)) : 0 );
+    console.log("a", a);
+    this.dataObj.vna = a;
+    this.changeModel.emit(this.dataObj);
   }
 
   onNperiodChange() {

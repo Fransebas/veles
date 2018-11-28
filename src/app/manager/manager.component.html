@@ -1,3 +1,8 @@
-<p>
-  manager works!
-</p>
+<mat-form-field>
+  <input matInput dataType="numeric"  placeholder="Número de proyectos"  type="number" [(ngModel)]="n_proyects" (input)="onNperiodChange()">
+  <!-- [ngModelOptions]="{standalone: true}" -->
+</mat-form-field>
+
+<button mat-raised-button (click)="calculate()">Ordenar</button>
+
+<app-data-screen *ngFor="let n of dataNumbers" (changeModel)="onNPeriodsChange($event, n)" ></app-data-screen>
